@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+<title>正则表达式测试页面</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="/resource/css/global/base.css">
+<link rel="stylesheet" type="text/css" href="/resource/css/global/table.css">
+<script src="/resource/js/global/jquery.min.js"></script>
+<script src="/resource/js/global/toolsDate.js"></script>
+<script src="/resource/comm/My97DatePicker/WdatePicker.js"></script>
+
+</head>
+<body>
+	正则表达式：<input type="text" id="regExp" name="regExp" value="//"/>
+	匹配字符串：<input type="text" id="testStr" name="testStr" value=""/>
+	<input type="button" id="btnJudge" value="判断">
+	<hr />
+	日期：<input type="text" id="curDate" name="curDate" value="" class="Wdate" onfocus="WdatePicker({el:'curDate',dateFmt:'yyyy-MM-dd HH:mm:ss'})" readonly/>
+	格式：<input type="text" id="dateExp" name="dateExp" value="yyyy-MM-dd HH:mm:ss"/>
+	<input type="button" id="lastDate" value="上一天"><input type="button" id="nextDate" value="下一天">
+	日期：<input type="text" id="curDate1" name="curDate1" value="" class="Wdate" onfocus="WdatePicker({el:'curDate1',dateFmt:'yyyy-MM-dd HH:mm:ss'})" readonly/>
+	相差天数：<input type="text" id="dateSubtract" name="dateSubtract" value="0"/>
+	<input type="button" id="dateCommit" value="提交">
+	<hr />
+    <div style="margin-left: 200px; width: 200px;" id="content">
+      <input type="text" id="txtSelect" style="font-family: Microsoft YaHei; width: 210px;font-size: 14px; height: 25px; border: 1px solid #CCCCCC;" onFocus="funAutoComplete('MenuOption','1');" onBlur="funAutoComplete('MenuOption','2');" />
+      <div id="MenuOption" >
+      	<div>aaaaa</div>
+      	<div>bbbbb</div>
+      	<div>ccccc</div>
+      	<div>ddddd</div>
+      </div>
+    </div>
+</body>
+<script>
+$(function(){
+	//正则表达式
+	$("#btnJudge").on("click",function(){
+		var regExpStr = $.trim($("#regExp").val());
+		var regExp = eval(regExpStr);
+		alert(regExp.test($("#testStr").val()));
+	});
+	//格式按钮绑定
+	$("#lastDate").on("click",function(){
+		var cur = $.trim($("#curDate").val());
+		var curDate = new Date();
+		if(cur){
+			curDate = new Date(cur);
+		}
+		curDate.setDate(curDate.getDate()-1);
+		$("#curDate").val(curDate.Format($.trim($("#dateExp").val())));
+	});
+	$("#nextDate").on("click",function(){
+		var cur = $.trim($("#curDate").val());
+		var curDate = new Date();
+		if(cur){
+			curDate = new Date(cur);
+		}
+		curDate.setDate(curDate.getDate()+1);
+		$("#curDate").val(curDate.Format($.trim($("#dateExp").val())));
+	});
+	$("#dateCommit").on("click",function(){
+		$("#curDate1").val(getDateStr(parseInt($("#dateSubtract").val()),"yyyy-MM-dd"));
+	});
+});
+</script>
+</html>

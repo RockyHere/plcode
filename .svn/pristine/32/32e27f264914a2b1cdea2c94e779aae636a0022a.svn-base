@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="com.yanbang.bscp.Webapp">
+        <wb-resource deploy-path="/" source-path="/target/m2e-jee/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="com.yanbang.base-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.yanbang.base/com.yanbang.base">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.yanbang.config-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.yanbang.config/com.yanbang.config">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="com.yanbang.util-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.yanbang.util/com.yanbang.util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/com.yanbang.bscp.Webapp/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="/bscp"/>
+    </wb-module>
+</project-modules>

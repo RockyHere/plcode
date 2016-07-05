@@ -1,0 +1,9 @@
+db.driver=oracle.jdbc.driver.OracleDriver
+db.url=jdbc:oracle:thin:@192.168.1.202:1521:ora11g
+db.user=bsxy
+db.password=bsxy
+db.minPoolSize=1
+db.maxPoolSize=3
+db.maxStatements=200
+db.maxStatementsPerConnection=10
+db.maxIdleTime=0

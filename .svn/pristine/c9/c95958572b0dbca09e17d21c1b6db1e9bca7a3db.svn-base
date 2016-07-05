@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+<title>打印模板测试页面</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="/resource/css/global/base.css">
+<link rel="stylesheet" type="text/css" href="/resource/css/global/table.css">
+<script src="/resource/js/global/jquery.min.js"></script>
+<script src="/resource/js/global/toolsDate.js"></script>
+<script src="/resource/comm/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="/bscp/print.do?action=printTaskTicket&uuid=4f26e0115a684d81af3a967d24756f9f" target="_blank">作业票模板打印</a></li>
+			<li><a href="/bscp/print.do?action=printStowagePlan" target="_blank">配载计划模板打印</a></li>
+			<li><a href="/bscp/print.do?action=printWaterFreightBill" target="_blank">水路运单模板打印</a></li>
+			<li><a href="/bscp/print.do?action=printItemHandOver" target="_blank">货物交接清单模板打印</a></li>
+		</ul>
+	</div>
+</body>
+<script>
+</script>
+</html>
